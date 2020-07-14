@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A24D8BAE24BE641D0009BCA9 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D8BAD24BE641D0009BCA9 /* Meme.swift */; };
 		A261D40824BB30A100AD82D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A261D40724BB30A100AD82D6 /* AppDelegate.swift */; };
 		A261D40A24BB30A100AD82D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A261D40924BB30A100AD82D6 /* SceneDelegate.swift */; };
 		A261D40C24BB30A100AD82D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A261D40B24BB30A100AD82D6 /* ViewController.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A24D8BAD24BE641D0009BCA9 /* Meme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
 		A261D40424BB30A100AD82D6 /* MemeMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemeMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A261D40724BB30A100AD82D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A261D40924BB30A100AD82D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				A261D40924BB30A100AD82D6 /* SceneDelegate.swift */,
 				A261D40B24BB30A100AD82D6 /* ViewController.swift */,
 				A261D40D24BB30A100AD82D6 /* Main.storyboard */,
+				A24D8BAD24BE641D0009BCA9 /* Meme.swift */,
 				A261D41024BB30A500AD82D6 /* Assets.xcassets */,
 				A261D41224BB30A500AD82D6 /* LaunchScreen.storyboard */,
 				A261D41524BB30A500AD82D6 /* Info.plist */,
@@ -201,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A261D40C24BB30A100AD82D6 /* ViewController.swift in Sources */,
+				A24D8BAE24BE641D0009BCA9 /* Meme.swift in Sources */,
 				A261D40824BB30A100AD82D6 /* AppDelegate.swift in Sources */,
 				A261D40A24BB30A100AD82D6 /* SceneDelegate.swift in Sources */,
 			);

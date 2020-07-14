@@ -24,5 +24,7 @@
 	<string>Taking a photo to use it as a Meme</string>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
+	<key></key>
+	<string></string>
 </dict>
 </plist>

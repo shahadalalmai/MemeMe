@@ -28,24 +28,23 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         NSAttributedString.Key.strokeWidth: -3.0
     ]
     
-    struct Meme {
-        var topText: String?
-        var bottomText: String?
-        var originalImage = UIImage()
-        var memedImage = UIImage()
-        
-    }
-    
+    let topText = "TOP"
+    let bottomText = "BOTTOM"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        topTextField.text = "TOP"
-        topTextField.defaultTextAttributes = memeTextAttributes
-        topTextField.textAlignment = NSTextAlignment.center
-        bottomTextField.text = "BOTTOM"
-        bottomTextField.defaultTextAttributes = memeTextAttributes
-        bottomTextField.textAlignment = NSTextAlignment.center
+        
+        setupTextField(topTextField, topText)
+        setupTextField(bottomTextField, bottomText)
+
         shareButton.isEnabled = false
+    }
+    
+    func setupTextField(_ textField: UITextField, _ defaultText: String) {
+        textField.delegate = self
+        textField.defaultTextAttributes = memeTextAttributes
+        textField.textAlignment = .center
+        textField.text = defaultText
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -64,7 +63,7 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self // bcuz the current ViewController is handling the event
         imagePicker.sourceType = .photoLibrary
-        imagePicker.allowsEditing = true // from YouTube
+        imagePicker.allowsEditing = true
         present(imagePicker, animated: true, completion: nil)
         
     }
@@ -75,14 +74,16 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         imagePicker.delegate = self
         imagePicker.sourceType = .camera
         present(imagePicker, animated: true, completion: nil)
+        
     }
     
     // Delegate methods
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]){
-       
+        
         if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
             imagePickerView.image = image
+
         }
         dismiss(animated: true, completion: nil)
         shareButton.isEnabled = true
