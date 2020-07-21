@@ -160,7 +160,11 @@ UINavigationControllerDelegate, UITextFieldDelegate {
     
     func save() {
             // Create the meme
-        _ = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imagePickerView.image!, memedImage: generateMemedImage())
+        let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imagePickerView.image!, memedImage: generateMemedImage())
+    
+            // Add the meme to memes array on the AppDelegatr
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.memes.append(meme)
     }
     
 
@@ -181,8 +185,14 @@ UINavigationControllerDelegate, UITextFieldDelegate {
                 print("error while sharing: \(shareError.localizedDescription)")
             }
         }
-//        dismiss(animated: true, completion: nil)
         
+    }
+    
+
+    @IBAction func dismiss(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+
+        dismiss(animated: true, completion: nil)
     }
     
     
