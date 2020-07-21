@@ -9,5 +9,8 @@ I used IBOutlets and IBActions, protocols and delegete methods,struct and dictio
 Some help were taken from the below references:
 https://www.youtube.com/watch?v=JYkj1UmQ6_g
 https://www.swiftdevcenter.com/uiactivityviewcontroller-tutorial-by-example/
+https://stackoverflow.com/questions/24668818/how-to-dismiss-viewcontroller-in-swift
+
+
 
 Enjoy Meme-ing.
